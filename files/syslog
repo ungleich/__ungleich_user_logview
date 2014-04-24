@@ -1,0 +1,2 @@
+APPUSER ALL=(ALL) NOPASSWD: /bin/cat /var/log/*
+APPUSER ALL=(ALL) NOPASSWD: /bin/zcat /var/log/*.gz

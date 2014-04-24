@@ -1,0 +1,2 @@
+APPUSER ALL=(ALL) NOPASSWD: /bin/cat /var/log/nginx/*.log
+APPUSER ALL=(ALL) NOPASSWD: /bin/zcat /var/log/nginx/*.gz

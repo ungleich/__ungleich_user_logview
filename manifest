@@ -1,0 +1,12 @@
+__package sudo --state present
+
+user="$(cat "$__object/parameter/user")"
+
+mkdir "$__object/files"
+cd "$__type/files"
+for sudofile in *; do
+    sed "s/APPUSER/$user/g" "$sudofile" > "$__object/files/$sudofile"
+    require="__package/sudo" __file /etc/sudoers.d/$sudofile \
+        --source "$__object/files/$sudofile" \
+        --mode 0440
+done
