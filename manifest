@@ -1,6 +1,6 @@
 __package sudo --state present
 
-user="$(cat "$__object/parameter/user")"
+user="$__object_id"
 
 mkdir "$__object/files"
 cd "$__type/files"
