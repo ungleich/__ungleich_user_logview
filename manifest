@@ -16,5 +16,5 @@ require="__package/sudo" __line sudoers-include \
     --line "#includedir /etc/sudoers.d"
 
 require="__package/sudo" __directory /etc/sudoers.d \
-    --mode 0700
+    --mode 0750
 
